@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cat << EOF > pyscript.py
+
+#!/usr/bin/python
+print(f"Best School: {88+10}")
+EOF
+
+chmod u+x pyscript.py
+
+./pyscript.py
