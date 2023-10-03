@@ -11,4 +11,4 @@ def fizzbuzz():
             temp += "FizzBuzz "
         else:
             temp += str(i) + " "
-    print(temp, end=" ")
+    print(temp, end="")
