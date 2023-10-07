@@ -7,5 +7,5 @@ def no_c(my_string):
             if i == "c" or i == "C":
                 nl.remove(i)
     else:
-        return
+        return my_string
     return ('').join(nl)
