@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    if not my_list:
-        return
     nl = list(my_string)
     if 'c' in nl:
         for i in nl:
