@@ -2,9 +2,11 @@
 
 def no_c(my_string):
     if 'c' in my_string or 'C' in my_string:
-        nl = list(my_string)
-        for i in nl:
-            if i == "c" and i == "C":
-                nl.remove(i)
+        nl = []
+        for i in my_string:
+            if i == "c" or i == "C":
+               continue
+            else:
+                nl += [i]
         return ('').join(nl)
     return my_string
