@@ -5,7 +5,7 @@ def no_c(my_string):
         nl = []
         for i in my_string:
             if i == "c" or i == "C":
-               continue
+                continue
             else:
                 nl += [i]
         return ('').join(nl)
