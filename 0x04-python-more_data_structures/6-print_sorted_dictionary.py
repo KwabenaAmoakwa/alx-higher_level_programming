@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def print_sorted_dictionary(a_dictionary):
-    if a_dictionary != None:
+    if not a_dictionary None:
         li = list(a_dictionary.keys())
         li.sort()
         for i in range(len(li)):
