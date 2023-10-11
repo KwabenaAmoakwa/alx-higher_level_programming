@@ -29,8 +29,9 @@ def roman_to_int(roman_string):
                  'MM': 2000,
                  'MMM': 3000
                  }
-    one, ten, hundred, thousand, rom = 0, 0, 0, 0, ''
+    one, ten, hundred, thousand, count, rom = 0, 0, 0, 0, 0, ''
     for i in roman_string:
+        count += 1
         rom += i
         if rom in thousands.keys():
             thousand = thousands[rom]
@@ -39,6 +40,9 @@ def roman_to_int(roman_string):
         elif rom in tens.keys():
             ten = tens[rom]
         elif rom in ones.keys():
+            one = ones[rom]
+        elif count == len(roman_string):
+            rom = i
             one = ones[rom]
         else:
             rom = i
