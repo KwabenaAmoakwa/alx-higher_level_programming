@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
-    if type(roman_string) != 'string':
+    if not type(roman_string) is str:
         return 0
     ones = {'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5, 'VI': 6, 'VII': 7,
             'VIII': 8,
