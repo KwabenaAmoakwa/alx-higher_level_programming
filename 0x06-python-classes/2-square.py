@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""#!/usr/bin/python3 makes the file executable
+"""
+
+
 class Square:
     """
     A class representing a square.
@@ -11,7 +15,8 @@ class Square:
         Initializes a Square instance with an optional size.
 
         Args:
-            size (int, optional): The size of the square's sides. Defaults to 0.
+            size (int, optional): The size of the square's sides.
+            Defaults to 0.
 
         Raises:
             TypeError: If size is not an integer.
