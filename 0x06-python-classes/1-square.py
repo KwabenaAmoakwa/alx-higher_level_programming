@@ -8,7 +8,7 @@ class Square:
     A class representing a square.
 
     Attributes:
-        _size (int or float): The size of the square's sides.
+        __size (int or float): The size of the square's sides.
     """
 
     def __init__(self, size):
@@ -18,4 +18,4 @@ class Square:
         Args:
             size (int or float): The size of the square's sides.
         """
-        self._size = size
+        self.__size = size
