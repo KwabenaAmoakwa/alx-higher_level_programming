@@ -1,9 +1,9 @@
 #ifndef LISTS_H
 #define LISTS_H
-
+#define PY_SSIZE_T_CLEAN
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <Python.h>
 /**
  * struct listint_s - singly linked list
  * @n: integer
