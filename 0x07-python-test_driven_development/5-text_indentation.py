@@ -15,7 +15,7 @@ def text_indentation(text):
     Returns:
         None
     """
-    new_str = text.split()
+    new_str = text.split(" ")
     text = "|".join(new_str)
     new_str = ""
     for i in text:
