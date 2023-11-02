@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ module for add integer method"""
 
+
 def add_integer(a, b=98):
     """Adds two numbers and returns the sum.
 
@@ -20,6 +21,7 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
     return int(a) + int(b)
+
 
 if __name__ == "__main__":
     import doctest
