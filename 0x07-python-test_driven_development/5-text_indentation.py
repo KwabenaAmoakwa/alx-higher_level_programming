@@ -15,15 +15,19 @@ def text_indentation(text):
     Returns:
         None
     """
+    if not type(text) is str:
+        raise TypeError("text must be a string")
+
     new_str = text.split(" ")
     text = "|".join(new_str)
     new_str = ""
-    for i in text:
-        if i == "|":
-            continue
-        if i in ".?:":
-            new_str += i + "|"
-        else:
-            new_str += i
-    ns = new_str.split("| ")
+    for index, value in enumerate(text):
+        if value == "|" and text[index - 1] not in ":.?|":
+            if text[index + 1] == " ":
+                new_str += " "
+        elif value in ".?:":
+            new_str += value + "|"
+        elif value != "|":
+            new_str += value
+    ns = new_str.split("|")
     print("\n\n".join(ns), end="")
