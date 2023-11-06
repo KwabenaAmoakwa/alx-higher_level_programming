@@ -7,7 +7,7 @@ class MyList(list):
 
     Prints the elements of the list in ascending order using the sorted()
     function.
-    
+
     Args:
         None
 
@@ -16,7 +16,7 @@ class MyList(list):
 
     """
     def print_sorted(self):
-        print (sorted(self))
+        print(sorted(self))
 
 
 if __name__ == '__main__':
