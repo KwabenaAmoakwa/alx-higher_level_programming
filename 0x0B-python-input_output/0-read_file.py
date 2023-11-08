@@ -11,5 +11,5 @@ def read_file(filename=""):
     Returns:
         None
     """
-    with open(filename, "r") as l:
-        print(l.read())
+    with open(filename) as myfile:
+        print(myfile.read())
