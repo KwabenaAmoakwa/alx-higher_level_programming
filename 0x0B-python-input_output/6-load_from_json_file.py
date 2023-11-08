@@ -14,4 +14,4 @@ def load_from_json_file(filename):
     """
     with open(filename) as myfile:
         data = json.load(myfile)
-        my_obj = json.dumps(data)
+        return data
