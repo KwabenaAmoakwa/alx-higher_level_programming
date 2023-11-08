@@ -9,7 +9,7 @@ def save_to_json_file(my_obj, filename):
     Args:
         my_obj (object): object
         filename (file): file
-    
+
     Returns:
         None
     """
