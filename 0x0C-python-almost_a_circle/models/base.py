@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 """Implementation of Base class module"""
 
 
@@ -16,7 +16,7 @@ class Base:
     """
     __nb_objects = 0
     
-    def __init__(self, id=None):
+    def __init__(self, id = None):
         """
         Initializes a Base object.
         
@@ -31,8 +31,7 @@ class Base:
             ValueError: If an ID less than 0 is provided.
         """
         if id != None:
-            self.__id = id
+            self.id = id
         else:
-            self.__nb_objects += 1
-            self.__id = id
-    
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects  
