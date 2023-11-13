@@ -177,7 +177,7 @@ class Rectangle(Base):
         """
         prints in stdout the Rectangle instance with the character #
         """
-        for i in self.__height:
+        for i in range(self.__height):
             print("#"*self.__width)
     
     def __str__(self):
