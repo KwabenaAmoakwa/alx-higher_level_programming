@@ -33,5 +33,6 @@ class Base:
         if id != None:
             self.__id = id
         else:
-            __nb_objects += id
+            self.__nb_objects += 1
+            self.__id = id
     
