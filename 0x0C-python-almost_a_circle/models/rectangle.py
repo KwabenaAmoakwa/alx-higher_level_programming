@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """Implementation of rectangle class module"""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -161,6 +161,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+<<<<<<< HEAD
     
     def area(self):
         """calculates the area of rectangle
@@ -187,3 +188,5 @@ class Rectangle(Base):
         return f"[Rectangle] (self.id) self.__x/self.__y - \
             self.__width/self.__height"
     
+=======
+>>>>>>> f9fb3f11d278b07c6aecb12be60ccceef727b0f1
