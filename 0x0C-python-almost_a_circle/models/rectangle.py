@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Implementation of rectangle class module"""
 from models.base import Base
 
