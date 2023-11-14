@@ -186,4 +186,4 @@ class Rectangle(Base):
         """
         s = f"{self.__x}/{self.__y}"
         li = f"{self.__width}/{self.__height}"
-        return f"[Rectangle] (self.id) {s} - {li}"
+        return f"[Rectangle] ({self.id}) {s} - {li}"
