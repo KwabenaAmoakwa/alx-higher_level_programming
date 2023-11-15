@@ -187,3 +187,11 @@ class Rectangle(Base):
         s = f"{self.__x}/{self.__y}"
         li = f"{self.__width}/{self.__height}"
         return f"[Rectangle] ({self.id}) {s} - {li}"
+
+    def update(self, *args):
+        largs = list(args)
+        self.__id = largs[0]
+        self.__width = largs[1]
+        self.__height = largs[2]
+        self.__x = largs[3]
+        self.__y = largs[4]
