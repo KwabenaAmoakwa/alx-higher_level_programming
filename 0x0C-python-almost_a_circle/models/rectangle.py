@@ -189,6 +189,15 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {s} - {li}"
 
     def update(self, *args):
+        """
+        assigns an argument to each attribute
+        
+        Args:
+            args (set): set of arguments
+        
+        Returns:
+            None
+        """
         largs = list(args)
         if len(args) < 5:
             for i in range(5-len(args)):
