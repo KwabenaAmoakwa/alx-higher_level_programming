@@ -190,8 +190,11 @@ class Rectangle(Base):
 
     def update(self, *args):
         largs = list(args)
-        self.__id = largs[0]
-        self.__width = largs[1]
-        self.__height = largs[2]
-        self.__x = largs[3]
-        self.__y = largs[4]
+        if len(args) < 5:
+            for i in range(5-len(args)):
+                largs += ["l"]
+        self.id = largs[0] if largs[0] != "l" else self.id
+        self.__width = largs[1] if largs[1] != "l" else self.__width
+        self.__height = largs[2] if largs[2] != "l" else self.__height
+        self.__x = largs[3] if largs[3] != "l" else self.__x
+        self.__y = largs[4] if largs[4] != "l" else self.__y
