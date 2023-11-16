@@ -82,3 +82,14 @@ class Square(Rectangle):
         self.size = size if size != "l" else self.size
         self.x = x if x != "l" else self.x
         self.y = y if y != "l" else self.y
+        
+    def to_dictionary(self):
+        """
+        Return dictionary version of class
+        """
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
