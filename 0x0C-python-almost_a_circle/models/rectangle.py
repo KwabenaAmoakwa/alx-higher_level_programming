@@ -214,7 +214,7 @@ class Rectangle(Base):
         self.__height = height if height != "l" else self.__height
         self.__x = x if x != "l" else self.__x
         self.__y = y if y != "l" else self.__y
-        
+
     def to_dictionary(self):
         """
         Return dictionary version of class
@@ -225,4 +225,4 @@ class Rectangle(Base):
             "height": self.height,
             "x": self.x,
             "y": self.y
-        }
+            }

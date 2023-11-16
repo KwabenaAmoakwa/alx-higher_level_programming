@@ -57,7 +57,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
-        
+
     def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
@@ -82,7 +82,7 @@ class Square(Rectangle):
         self.size = size if size != "l" else self.size
         self.x = x if x != "l" else self.x
         self.y = y if y != "l" else self.y
-        
+
     def to_dictionary(self):
         """
         Return dictionary version of class
@@ -92,4 +92,4 @@ class Square(Rectangle):
             "size": self.size,
             "x": self.x,
             "y": self.y
-        }
+            }
