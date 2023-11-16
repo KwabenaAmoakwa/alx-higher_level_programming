@@ -56,28 +56,29 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.width = value
-
-    @property
-    def height(self):
+        self.height = value
+        
+    def update(self, *args, **kwargs):
         """
-        int: Height of the square.
-        """
-        return self.size
-
-    @height.setter
-    def height(self, value):
-        """
-        Setter for the height property.
+        assigns an argument to each attribute
 
         Args:
-            value (int): New height value.
+            args (set): set of arguments
+            kwargs (dictionary): set of key value pair arguments
 
-        Raises:
-            ValueError: If value is less than 0.
-            TypeError: If value is not an integer.
+        Returns:
+            None
         """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
-        self.size = value
+        largs = list(args)
+        if len(args) < 4:
+            for i in range(4-len(args)):
+                largs += ["l"]
+        size = kwargs['size'] if 'size' in kwargs else largs[1]
+        x = kwargs['x'] if 'x' in kwargs else largs[2]
+        y = kwargs['y'] if 'y' in kwargs else largs[3]
+        id = kwargs['id'] if 'id' in kwargs else largs[0]
+
+        self.id = id if id != "l" else self.id
+        self.size = size if size != "l" else self.size
+        self.x = x if x != "l" else self.x
+        self.y = y if y != "l" else self.y
