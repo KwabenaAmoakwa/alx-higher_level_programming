@@ -216,4 +216,7 @@ class Rectangle(Base):
         self.__y = y if y != "l" else self.__y
         
     def to_dictionary(self):
+        """
+        Return dictionary version of class
+        """
         return self.__dict__
