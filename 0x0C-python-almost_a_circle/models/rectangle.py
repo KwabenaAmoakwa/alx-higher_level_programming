@@ -188,12 +188,13 @@ class Rectangle(Base):
         li = f"{self.__width}/{self.__height}"
         return f"[Rectangle] ({self.id}) {s} - {li}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
 
         Args:
             args (set): set of arguments
+            kwargs (dictionary): set of key value pair arguments
 
         Returns:
             None
@@ -202,8 +203,14 @@ class Rectangle(Base):
         if len(args) < 5:
             for i in range(5-len(args)):
                 largs += ["l"]
-        self.id = largs[0] if largs[0] != "l" else self.id
-        self.__width = largs[1] if largs[1] != "l" else self.__width
-        self.__height = largs[2] if largs[2] != "l" else self.__height
-        self.__x = largs[3] if largs[3] != "l" else self.__x
-        self.__y = largs[4] if largs[4] != "l" else self.__y
+        width = kwargs['width'] if 'width' in kwargs else largs[0]
+        height = kwargs['height'] if 'height' in kwargs else largs[1]
+        x = kwargs['x'] if 'x' in kwargs else largs[2]
+        y = kwargs['y'] if 'y' in kwargs else largs[3]
+        id = kwargs['id'] if 'id' in kwargs else largs[4]
+        
+        self.id = id if id != "l" else self.id
+        self.__width = width if width != "l" else self.__width
+        self.__height = height if height != "l" else self.__height
+        self.__x = x if x != "l" else self.__x
+        self.__y = y if y != "l" else self.__y
