@@ -9,7 +9,7 @@ if __name__ == "__main__":
     print(s1.size)
     s1.size = 10
     print(s1)
-    s1.width = "l"
+    s1.width = 5
     print(s1.width)
     
 
