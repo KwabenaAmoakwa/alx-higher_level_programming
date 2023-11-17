@@ -51,3 +51,12 @@ class Base:
         if type(list_dictionaries) is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        
+        """
+        with open(cls, "w") as my_file:
+            my_file.write(Base.to_json_string(list_objs))
+        return my_file
