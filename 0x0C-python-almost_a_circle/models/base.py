@@ -48,6 +48,6 @@ class Base:
         Returns:
             str: JSON string representation of list_dictionaries.
         """
-        if type(list_dictionaries) is None or list_dictionaries == 0:
+        if type(list_dictionaries) is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
