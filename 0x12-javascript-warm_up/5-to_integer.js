@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const arg = process.arg.split(2);
+const arg = process.arg.slice(2);
 
 const temp = parseInt(arg[0]);
 
