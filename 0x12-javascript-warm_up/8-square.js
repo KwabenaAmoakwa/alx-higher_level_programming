@@ -1,11 +1,17 @@
 #!/usr/bin/node
+const x = process.argv[2];
 
-const arg = process.argv.slice(2);
-
-if (isNaN(arg[0]) || arg[0] === undefined) {
+if (!parseInt(x)) {
   console.log('Missing size');
 } else {
-  for (let index = 0; index < arg[0]; index++) {
-    console.log('x'.repeat(arg[0]));
+  for (let i = 0; i < x; i++) {
+    let y = 0;
+    let myVar = '';
+
+    while (y < x) {
+      myVar = myVar + 'X';
+      y++;
+    }
+    console.log(myVar);
   }
 }
